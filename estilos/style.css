@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    font-size: 16px;
+}
+body{
+    background-color: rgb(122, 122, 122);
+}
+main{
+    background-color: aliceblue;
+    width: 500px;
+    margin: auto;
+    padding: 10px;
+    box-shadow: 3px 3px 5px rgba(rgb(2rgb(117, 117, 117)55, 255), rgb(71, 71, 71), rgb(0, 0, 0), alpha);
+}
+
