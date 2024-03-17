@@ -6,6 +6,10 @@
     font-family: Arial, sans-serif;
     letter-spacing: 1px;
 }
+body{
+    background: black;
+    height: 100vh;
+}
 header{
     display: flex;
     align-items: center;
@@ -21,11 +25,17 @@ section{
     display: flex;
     align-items: center;
 }
-input{
-    margin-left: 20px;
-    padding: 5PX 0px 5px 40px;
+#pesquisa {
+    margin-left: 40px;
+    padding: 6PX 0px 6px 45px;
     border-radius: 10px;
     outline: none;
+    background-color: black;
+    border: solid 1px white;
+    color: white;
+}
+#pesquisa::placeholder{
+    color: white;
 }
 nav{
     display: flex;
@@ -38,13 +48,25 @@ a{
 }
 .material-icons{
     position: absolute;
-    left: 205px;
+    left: 230px;
+    color: white;
+    border-right: 1px solid white;
 }
 hr{
     margin-left: 50px;
     margin-right: 50px;
 }
 nav a{
-    color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+}
+nav a:hover{
+    color: red;
+    box-shadow: 1px 3px red;
+}
+nav a:active{
+    color: rgb(139, 0, 0);
+    box-shadow: 0px 1px rgb(255, 0, 0);
 }
 
