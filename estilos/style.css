@@ -8,7 +8,7 @@
 }
 body{
     background: black;
-    height: 100vh;
+    min-height: 100vh;
 }
 header{
     display: flex;
@@ -52,7 +52,7 @@ a{
     color: white;
     border-right: 1px solid white;
 }
-hr{
+.h{
     margin-left: 50px;
     margin-right: 50px;
 }
@@ -68,5 +68,71 @@ nav a:hover{
 nav a:active{
     color: rgb(139, 0, 0);
     box-shadow: 0px 1px rgb(255, 0, 0);
+}
+.box{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    border: solid 5px white;
+    font-size: 40px;
+    padding: 30px;
+    border-radius: 50px;
+    text-shadow: 0 0 0.125em rgba(0, 0, 0, 0.5), 0 0 0.25em currentColor;
+    animation: box 1s alternate infinite;
+    box-shadow: inset 0 0 0.5em white, 0 0 0.5em 0 white;
+    cursor: pointer;
+    background-color: transparent;
+    position: relative;
+}
+.box::before {
+    content: '';
+    position: absolute;
+    top: 70%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1em);
+    opacity: 0.7;
+    background: white;
+    animation: box2 1s alternate infinite;
+  }
+  .box:hover{
+    border: solid 5px red;
+    color: red;
+    box-shadow: inset 0 0 1em red, 0 0 1em 0 red;
+    text-shadow: 0 0 0.200em #ff0000, 0 0 0.30em currentColor;
+    transition: 0.5s;
+}
+.box:hover::before{
+    filter: blur(1em);
+    opacity: 1;
+    background: #ff0000;
+    transform: perspective(1em) rotateX(45deg) scale(1, 0.45);
+    transition: 0.5s;
+}
+@keyframes box2{
+    0%{
+        position: absolute;
+        top: 70%;
+        opacity: 0.7;
+    }
+    100%{
+        position: absolute;
+        top: 114%;
+        opacity: 0.3;
+    }
+}
+@keyframes box{
+    0%{
+        position: absolute;
+        top: 55%;
+    }
+    100%{
+        position: absolute;
+        top: 52%;
+    }
 }
 
