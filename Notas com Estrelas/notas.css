@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+    font-family: 'poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+button{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    border-radius: 10px;
+    font-size: 15px;
+    height: 30px;
+    width: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    border: none;
+    box-shadow: 1px 2px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    margin-left: 20px;
+}
+button:active{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    border-radius: 10px;
+    font-size: 15px;
+    height: 30px;
+    width: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    border: none;
+    box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
+    margin-top: 21px;
+    margin-left: 21px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0a2b3c;
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;/*direção dos itens flexíveis*/
+    padding: 30px;
+    border-radius: 11px;
+    box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.25),/*anexa uma ou mais sombras a um elemento*/
+    inset -1px -1px 5px rgba(255, 255, 255, 0.25),
+    8px 30px 30px rgba(0,0,0,0.4),
+    inset -2px -2px 5px rgba(0,0,0,0.3);
+                   
+}
+.container h2{
+    margin-bottom: 10px;
+    font-weight: 500px;
+    color: #1f9cff;
+}
+.container .skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    padding-right: 10px;
+    box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.25),
+    inset -1px -1px 5px rgba(255, 255, 255, 0.25),
+    8px 30px 30px rgba(0,0,0,0.4),
+    inset -2px -2px 5px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+.container .skills h2{
+    min-width: 180px;
+    text-align: right;
+    padding-right: 20px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.container:hover .skills{
+    filter: blur(5px);/*define efeitos visuais (como desfoque e saturação) para um elemento*/
+    opacity: 0.2;
+}
+.container .skills:hover{
+    filter: blur(0px);
+    opacity: 1;
+}
+.container .skills .rating {
+    position: relative;
+    display: flex;
+    margin: 10px 0;
+    flex-direction: row-reverse;
+}
+.container .skills .rating input{
+    position: relative;
+    width: 20px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    -webkit-appearance: none; /*permite que os autores da web alterem
+     a aparência dos elementos HTML para se parecerem com os controles
+      nativos da interface do usuário*/
+    appearance: none;
+    overflow: hidden;
+}
+.container .skills .rating input::before{
+    content: '\f005';
+    position: absolute;
+    font-family: fontAwesome;
+    font-size: 34px;
+    position: absolute;
+    left: 4px;
+    color: #030b0f;
+    transition: 0.5s;
+}
+.container .skills .rating input:nth-child(2n+1)/*corresponde a cada elemento que é o n º criança, independentemente do tipo, de seu pai*/::before{
+    right: 4px;
+    left: initial/*definir uma propriedade CSS com seu valor padrão*/;
+}
+.container .skills .rating input:hover ~ input::before,
+.container .skills .rating input:hover::before,
+.container .skills .rating input:checked/*corresponde a cada elemento <input> marcado*/ ~ input::before,
+.container .skills .rating input:checked::before{
+    color: #1f9cff;
+}
+/* Checked serve apenas para botões de opção e caixas de seleção*/

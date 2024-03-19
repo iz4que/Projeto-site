@@ -17,14 +17,26 @@
             <input type="text" name="texto" id="pesquisa" placeholder="Pesquisa">
         </section>
         <nav>
-            <a href="">Home</a>
-            <a href="">Contato</a>
-            <a href="">Sobre</a>
-            <a href="">Login</a>
+            <a href="Website/website.html">Home</a>
+            <a href="Formulário/formulario.html">Contato</a>
+            <a href="Notas com Estrelas/notas.html">Sobre</a>
+            <a href="Tela de Login/login.html">Login</a>
         </nav>
     </header>
     <hr class="h">
     <div class="box">CLICK</div>
+    <script>
+        botao = document.querySelector('.box')
+
+        function openInNewTab(url) {
+            var win = window.open(url, '_blank');
+             win.focus();
+        }
+
+        botao.addEventListener('click', function() {
+            openInNewTab('https://github.com/iz4que/Projeto-site');
+        });
+    </script>
 </body>
 </html>
 

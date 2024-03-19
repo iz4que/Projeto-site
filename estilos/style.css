@@ -51,6 +51,7 @@ a{
     left: 230px;
     color: white;
     border-right: 1px solid white;
+    cursor: pointer;
 }
 .h{
     margin-left: 50px;
@@ -64,6 +65,7 @@ nav a{
 nav a:hover{
     color: red;
     box-shadow: 1px 3px red;
+    transition: 0.2s;
 }
 nav a:active{
     color: rgb(139, 0, 0);
