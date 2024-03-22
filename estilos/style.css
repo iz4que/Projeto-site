@@ -87,6 +87,7 @@ nav a:active{
     cursor: pointer;
     background-color: transparent;
     position: relative;
+    transition: 0.5s;
 }
 .box::before {
     content: '';
@@ -100,6 +101,7 @@ nav a:active{
     opacity: 0.7;
     background: white;
     animation: box2 1s alternate infinite;
+    transition: 0.5s;
   }
   .box:hover{
     border: solid 5px red;
